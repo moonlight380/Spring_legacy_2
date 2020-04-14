@@ -24,7 +24,7 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.google.spring_2" />
-	
-	
+	<!-- 이패키지 안에 들어가 있는 annotation을 읽어보겠다. -->
+	<context:component-scan base-package="com.google.member" />
 	
 </beans:beans>

@@ -5,4 +5,21 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
+			<!-- MemberDAO memberDAO = new MemberDAO() -->
+			<bean class="com.google.spring_2.member.MemberDAO" id="memberDAO "></bean>
+			
+			<!-- MemberService memberService = new MemberService() -->
+			<bean class="com.google.spring_2.member.MemberService" id="memberService">
+				<constructor-arg name="memberDAO" ref="memberDAO "></constructor-arg>
+				<!--위에 만들어둔 memberDAO로 MemberDAO를 참조변수로 만들어라 -->
+			<!-- memberService.setMemberDAO(memberDAO) 의존성 주입 방식 중에 SETTER 이용한 방식 -->
+			
+			<!-- service 안에 setter를 만들어주세요 -->
+
+		</bean>
+		
+		
+		
+		
+		
 </beans>
