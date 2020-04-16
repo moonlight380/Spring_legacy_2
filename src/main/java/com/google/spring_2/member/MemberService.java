@@ -1,20 +1,28 @@
 package com.google.spring_2.member;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.google.spring_2.member.MemberDAO;
 
+@Service
 public class MemberService {
+	
+	  @Autowired 
+	  private MemberDAO memberDAO; //멤버변수 선언
+	 
+	 /* @Autowired public MemberService(MemberDAO memberDAO) {
+	 * 
+	 * this.memberDAO = new MemberDAO(); }
+	 * 
+	 * 
+	 * @Autowired public void setMemberDAO(MemberDAO memberDAO) { this.memberDAO =
+	 * memberDAO; }
+	 */
 
-	private MemberDAO memberDAO;
-	
-	
 
-	public MemberService(MemberDAO memberDAO) {
-		
-		this.memberDAO = new  MemberDAO();
-	}
-	
-	
+
 	public int memberJoin(MemberVO memberDTO) throws Exception {
 		int result =memberDAO.memberJoin(memberDTO);
 		return result;

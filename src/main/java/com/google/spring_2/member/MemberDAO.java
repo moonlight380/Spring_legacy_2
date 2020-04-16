@@ -3,8 +3,11 @@ package com.google.spring_2.member;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import com.google.util.DBConnect;
 
+import org.springframework.stereotype.Repository;
+
+import com.google.util.DBConnect;
+@Repository
 public class MemberDAO {
 
 	
